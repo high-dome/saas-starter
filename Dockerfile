@@ -24,7 +24,7 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
       
-RUN corepack enable pnpm && pnpm drizzle-kit push
+RUN corepack enable pnpm && pnpm drizzle-kit push --yes
 
 # Next.js collects completely anonymous telemetry data about general usage.
 # Learn more here: https://nextjs.org/telemetry
